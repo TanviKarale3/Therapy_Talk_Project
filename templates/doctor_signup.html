@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Signup - TherapyTalk</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            background-image: url('https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow: auto;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.97);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 10px;
+            color: #2c3e50;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #28a745;
+            box-shadow: 0px 0px 5px rgba(40, 167, 69, 0.5);
+            outline: none;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 15px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Doctor Registration - TherapyTalk</h2>
+        <p>Welcome to TherapyTalk! Please fill out the form below to create your doctor account and start managing your clinic efficiently.</p>
+        <form action="{{ url_for('doctor_signup') }}" method="POST">
+            <label for="clinic_name" class="form-label">Clinic Name</label>
+            <input type="text" class="form-control" id="clinic_name" name="clinic_name" required>
+
+            <label for="doctor_name" class="form-label">Doctor Name</label>
+            <input type="text" class="form-control" id="doctor_name" name="doctor_name" required>
+
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-control" id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="specialty" class="form-label"> Specialization</label>
+            <select class="form-control" id="specialty" name="specialty" required>
+                <option value="">Select  Specialization</option>
+                <option value="SLP">Speech-Language Pathologists (SLPs)</option>
+                <option value="ENT">Otolaryngologists (ENT Specialists)</option>
+                <option value="Neurologist">Neurologists</option>
+                <option value="Pediatrician">Pediatricians</option>
+                <option value="Developmental Pediatrician">Developmental Pediatricians</option>
+                <option value="Psychiatrist">Psychiatrists</option>
+                <option value="Psychologist">Psychologists</option>
+                <option value="Rehabilitation Specialist">Rehabilitation Specialists</option>
+                <option value="Audiologist">Audiologists</option>
+            </select>
+
+            <label for="experience" class="form-label">Experience (Years)</label>
+            <input type="number" class="form-control" id="experience" name="experience" required>
+
+            <label for="license_certificate_no" class="form-label">License Certificate No</label>
+            <input type="text" class="form-control" id="license_certificate_no" name="license_certificate_no" required>
+
+            <label for="address" class="form-label">Clinic Address</label>
+            <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+
+            <div class="button-container">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="/doctor_login">Login</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

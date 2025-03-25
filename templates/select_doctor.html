@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Doctor - TherapyTalk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .nav-links {
+            margin-bottom: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav-links a:hover {
+            color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .no-doctors {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="{{ url_for('patient_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('select_doctor') }}">Select Doctor</a>
+        </div>
+        <h2>Available Doctors</h2>
+
+        {% if doctors %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Doctor Name</th>
+                    <th>Specialty</th>
+                    <th>Experience</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doctor in doctors %}
+                <tr>
+                    <td>{{ doctor[1] }}</td>
+                    <td>{{ doctor[2] }}</td>
+                    <td>{{ doctor[3] }} years</td>
+                    <td>
+                        <form action="{{ url_for('request_appointment', doctor_id=doctor[0]) }}" method="POST">
+                            <button type="submit">Request Appointment</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p class="no-doctors">No doctors found for your disease.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

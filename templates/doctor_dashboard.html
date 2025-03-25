@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - TherapyTalk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .approve {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .reject {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Doctor Dashboard</h2>
+        
+        <!-- Therapist Information -->
+        <h3>Therapist Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Specialization</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ therapist_info[0] }}</td>
+                    <td>{{ therapist_info[1] }}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Patient Activity -->
+        <h3>Patient Activity</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No. of Requests Received</th>
+                    <th>Total Approved Requests</th>
+                    <th>No. of Active Patients</th>
+                    <th>Successfully Completed Therapy Cases</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ patient_activity[0] }}</td>
+                    <td>{{ patient_activity[1] }}</td>
+                    <td>{{ patient_activity[2] }}</td>
+                    <td>{{ patient_activity[3] }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pending Approvals -->
+    <!-- Pending Approvals Section -->
+<h3>Pending Approvals</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Disorder</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in pending_approvals %}
+        <tr>
+            <td>{{ appointment[1] }}</td> <!-- Patient Name -->
+            <td>{{ appointment[2] }}</td> <!-- Address -->
+            <td>{{ appointment[3] }}</td> <!-- Disorder -->
+            <td>{{ appointment[4] }}</td> <!-- Contact -->
+            <td>{{ appointment[5] }}</td> <!-- Email -->
+            <td>{{ appointment[6] }}</td> <!-- Status -->
+            <td>
+                <form action="/accept_appointment/{{ appointment[0] }}" method="POST" style="display: inline;">
+                    <button type="submit" class="approve">Accept</button>
+                </form>
+                <form action="/reject_appointment/{{ appointment[0] }}" method="POST" style="display: inline;">
+                    <button type="submit" class="reject">Reject</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+        <!-- Active Patients -->
+        <h3>Active Patients</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Disorder</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for patient in active_patients %}
+                <tr>
+                    <td>{{ patient[1] }}</td>
+                    <td>{{ patient[2] }}</td>
+                    <td>{{ patient[3] }}</td>
+                    <td>{{ patient[4] }}</td>
+                    <td>{{ patient[5] }}</td>
+                    <td>{{ patient[6] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Successfully Completed Therapy Cases -->
+        <h3>Successfully Completed Therapy Cases</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Disorder</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for patient in completed_cases %}
+                <tr>
+                    <td>{{ patient[1] }}</td>
+                    <td>{{ patient[2] }}</td>
+                    <td>{{ patient[3] }}</td>
+                    <td>{{ patient[4] }}</td>
+                    <td>{{ patient[5] }}</td>
+                    <td>{{ patient[6] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

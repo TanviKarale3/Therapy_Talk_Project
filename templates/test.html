@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Therapy Test Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            min-height: 100vh;
+            background-image: url('https://c8.alamy.com/comp/2RC7GF8/speech-therapist-vector-illustration-with-child-training-basic-language-skills-and-articulation-problem-in-flat-cartoon-hand-drawn-templates-2RC7GF8.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dashboard {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .disorder-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .disorder-buttons button {
+            padding: 15px 25px;
+            border-radius: 5px;
+            border: 1px solid #007BFF;
+            background-color: transparent;
+            color: #007BFF;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .disorder-buttons button:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .test-list {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .test-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .test-item button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .test-item button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Speech Therapy Test Series</h1>
+        <div class="disorder-buttons">
+            <button onclick="showTests('Speech Delay')">Speech Delay</button>
+            <button onclick="showTests('Stuttering')">Stuttering</button>
+            <button onclick="showTests('Voice Disorder')">Voice Disorder</button>
+            <button onclick="showTests('Neurological Speech Issue')">Neurological Speech Issue</button>
+            <button onclick="showTests('Pediatric Speech Delay')">Pediatric Speech Delay</button>
+            <button onclick="showTests('Autism Communication Issue')">Autism Communication Issue</button>
+            <button onclick="showTests('Post-Surgery Recovery')">Post-Surgery Recovery</button>
+            <button onclick="showTests('Hearing and Speech Issue')">Hearing and Speech Issue</button>
+        </div>
+        <div id="testList" class="test-list"></div>
+    </div>
+
+    <script>
+        const disordersWithTests = {
+            "Speech Delay": Array.from({ length: 10 }, (_, i) => ({ name: `Test ${i + 1}`, description: `Speech Delay Test ${i + 1} description` })),
+            "Stuttering": Array.from({ length: 10 }, (_, i) => ({ name: `Test ${i + 1}`, description: `Stuttering Test ${i + 1} description` })),
+            "Voice Disorder": Array.from({ length: 10 }, (_, i) => ({ name: `Test ${i + 1}`, description: `Voice Disorder Test ${i + 1} description` })),
+            "Neurological Speech Issue": Array.from({ length: 10 }, (_, i) => ({ name: `Test ${i + 1}`, description: `Neurological Speech Issue Test ${i + 1} description` })),
+            "Pediatric Speech Delay": Array.from({ length: 10 }, (_, i) => ({ name: `Test ${i + 1}`, description: `Pediatric Speech Delay Test ${i + 1} description` })),
+            "Autism Communication Issue": Array.from({ length: 10 }, (_, i) => ({ name: `Test ${i + 1}`, description: `Autism Communication Issue Test ${i + 1} description` })),
+            "Post-Surgery Recovery": Array.from({ length: 10 }, (_, i) => ({ name: `Test ${i + 1}`, description: `Post-Surgery Recovery Test ${i + 1} description` })),
+            "Hearing and Speech Issue": Array.from({ length: 10 }, (_, i) => ({ name: `Test ${i + 1}`, description: `Hearing and Speech Issue Test ${i + 1} description` }))
+        };
+
+        function showTests(disorder) {
+            const testList = document.getElementById('testList');
+            testList.innerHTML = '';
+
+            if (disordersWithTests[disorder]) {
+                disordersWithTests[disorder].forEach(test => {
+                    const testItem = document.createElement('div');
+                    testItem.className = 'test-item';
+                    testItem.innerHTML = `
+                        <span><strong>${test.name}:</strong> ${test.description}</span>
+                        <button onclick="startTest('${test.name}')">Start Test</button>
+                    `;
+                    testList.appendChild(testItem);
+                });
+            }
+        }
+
+        function startTest(testName) {
+            alert(`Starting ${testName}`);
+        }
+    </script>
+</body>
+</html>

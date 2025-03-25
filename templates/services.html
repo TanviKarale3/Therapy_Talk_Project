@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+                <title>SERVICES</title>
+	<meta charset="utf-8">
+	<meta name="author" content="">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="SERVICES">
+	<meta name="keywords" content="SERVICES">
+
+
+                
+                    <meta name="twitter:card" content="summary_large_image" />
+    
+
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+
+                
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
+    <!-- WEBSITE JS -->
+            
+    
+    <!-- PAGE JS -->
+        <!-- CSS ================================================== -->
+
+                        <link rel="stylesheet" href="{{ url_for('static', filename='css/combined.min.css') }}" type='text/css'>         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//static.sitemantic.com/webbuilder/js/lightbox/src/css/lightbox.css">
+    
+
+
+                        <link id="theme" rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}"  type='text/css'>
+                                            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Lato:400,700,300,100" type='text/css'>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com" type='text/css'>
+                    <link rel="stylesheet" href="https://fonts.gstatic.com" type='text/css'>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville+SC&amp;display=swap" type='text/css'>
+                	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <style id="footerBefore">
+            .footerBefore:before {
+                
+            }
+        </style>
+        <style>
+            .siteNavLink.patient {
+                background-color: #3498db; /* Blue for Patients */
+                color: white;
+                padding: 10px 15px;
+                border-radius: 5px;
+                text-decoration: none;
+                display: inline-block;
+                margin: 5px;
+            }
+    
+            .siteNavLink.therapist {
+                background-color: #e74c3c; /* Red for Therapists */
+                color: white;
+                padding: 10px 15px;
+                border-radius: 5px;
+                text-decoration: none;
+                display: inline-block;
+                margin: 5px;
+            }
+    
+            /* Optional: Change background on hover */
+            .siteNavLink.patient:hover {
+                background-color: #2980b9;
+            }
+    
+            .siteNavLink.therapist:hover {
+                background-color: #c0392b;
+            }
+    
+            /* Style the dropdown menu */
+            .dropdown {
+                list-style: none;
+                padding: 10px;
+                display: inline-block;
+            }
+            /* Style for download list */
+            .download-option {
+                list-style: none;
+                display: inline-block;
+                margin: 10px;
+            }
+            
+            /* Common styles for both links */
+            .download-link {
+                display: inline-block;
+                color: #333; /* Default text color */
+                padding: 12px 20px;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+                transition: color 0.3s ease, background-color 0.3s ease;
+            }
+            
+            /* Hover effect */
+            .download-link:hover {
+                color: #4CAF50; /* Changes text color on hover */
+            }
+            
+            /* Responsive Styling */
+            @media (max-width: 768px) {
+                .download-link {
+                    font-size: 14px;
+                    padding: 10px 15px;
+                }
+            }
+            
+            .buy-test-series-option {
+                list-style-type: none;
+                margin: 10px 0;
+            }
+            
+            .buy-test-series-link {
+                text-decoration: none;
+                color: #007BFF;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+            
+            .buy-test-series-link:hover {
+                color: #0056b3;
+            }
+        </style>
+
+</head>
+<body>
+<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <header class="blockHeader wb-header  " fixed="false"><div class="container-fluid ">
+                                    <div class="logoWidget logo logoTextSettingClass     ">
+        <a href="{{ url_for('home') }}" title="">
+                                                
+                                            
+        
+                    
+                            
+                            
+                
+                                        <span id="logoTextWrap" style="">
+                        <span class="websiteLogoName" style="color:#;font-family:Roboto;font-size:25px">TherapyTalk</span>
+                        <span class="websiteLogoSlogan" style="color:#fff;font-family:Roboto;font-size:10px"></span>
+                    </span>
+                        </a>
+</div>            
+                                <div class="navbar navbar-default navbar-static-top ">
+                                    <div class="navbar-header" id="13431279" compid="13431279" pageid="0" component-data="{}">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>            
+                                        
+<div class="navWidget navbar-collapse collapse
+        
+    ">
+    <ul class="parent-nav-ul nav navbar-nav navbar-center cl-effect-13"><li class="dropdown">
+                        <a href="{{ url_for('home') }}" pageslug="home" linktype="Page" class="siteNavLink">
+                            HOME
+                                                    </a>
+                                            </li>
+                                                          
+          
+                                                <li class="dropdown">
+                        <a href="{{ url_for('about') }}" pageslug="about" linktype="Page" class="siteNavLink">
+                            ABOUT
+                                                    </a>
+                                            </li>
+                                                          
+          
+                                                <li class="dropdown">
+                        <a href="{{ url_for('services') }}" pageslug="services" linktype="Page" class="siteNavLink">
+                            SERVICES
+                                                    </a>
+                                            </li>
+                                                          
+          
+                                                <li class="dropdown">
+                        <a href="{{ url_for('our_gallery') }}" pageslug="our-gallery" linktype="Page" class="siteNavLink">
+                            OUR GALLERY
+                                                    </a>
+                                            </li>
+                                                          
+          
+                                                <li class="dropdown">
+                        <a href="{{ url_for('contact_us') }}" pageslug="contact-us" linktype="Page" class="siteNavLink">
+                            CONTACT US
+                                                    </a>
+                                            </li>
+                                            <li class="buy-test-series-option">
+                                                <a href="{{ url_for('test') }}" pageslug="Introduction Page" linktype="Page" class="buy-test-series">
+                                                    Buy Test Series
+                                                </a>
+                                            </li>
+                                            
+
+                                            <li class="download-option">
+                                                <a href="https://drive.google.com/uc?export=download&id=1W2J4OwvkzpCTlveMN_Lb-94qVw17b_Hy" pageslug="Patient Guide" linktype="Page" class="download-link patient-guide">
+                                                    Download Patient Guide
+                                                </a>
+                                            </li>
+                                            <li class="download-option">
+                                                <a href="https://drive.google.com/uc?export=download&id=1cS3O0mnxlsJ8DB_ED3oJb1SD_8rTfAqh" pageslug="Doctor Guide" linktype="Page" class="download-link doctor-guide">
+                                                    Download Doctor Guide
+                                                </a>
+                                            </li>
+                                    
+                                            <li class="dropdown">
+                                                <a href="{{ url_for('login') }}" pageslug="log In/Sign Up" linktype="Page" class="siteNavLink patient">
+                                                    Log In/Sign Up As Patient
+                                                </a>
+                                            </li>                     
+                                            <li class="dropdown">
+                                                <a href="{{ url_for('doctor_login') }}" pageslug="log In/Sign Up" linktype="Page" class="siteNavLink therapist">
+                                                    Log In/Sign Up As Therapist
+                                                </a>
+                                            </li>
+                                                                     
+                
+                                                                                                                                                                                            </ul></div>            
+    
+</div>
+            
+    
+</div>
+            
+    
+    <div class="container header-image-text"></div>
+</header>
+<div id="services" class="page wb-page">
+                                    
+
+
+<section id="section-13431197" class="
+                breadcrumb-section                 "><div class="container boxWidget">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 ">
+                                    <div class="richTextWidget mini-banner ">
+     <h1 class="header-heading">Our Goals</h1></div>            
+    
+</div>
+            
+    
+</div>
+            
+    
+</section><section id="section-13431201" class="
+                service-section                 "><div class="container boxWidget">
+                                    <div class="row custom-row ">
+                                    <div class="col-lg-4 col-md-4 col-sm-12 ">
+                                    <div class="richTextWidget service-content ">
+       <h1 class="service-bg">Our Services</h1><p>TherapyTalk offers a range of essential services to support speech-language pathologists in delivering effective communication interventions. Our comprehensive solution includes the following key features:</p></div>            
+    
+</div>
+            
+                                <div class="col-lg-8 col-md-8 col-sm-12 ">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                    <div class="service-card item ">
+                                    <div class="iconWidget service-icon ">
+     <i class="fa fa-cog custom-icon"></i></div>            
+                                <div class="richTextWidget  ">
+     <h2 class="first-row-dot width-set">Assessment and Evaluation Tools</h2> <p>TherapyTalk provides advanced assessment and evaluation tools to help clinicians accurately diagnose and understand the communication needs of their patients.</p></div>            
+    
+</div>
+            
+    
+</div>
+            
+                                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                    <div class="service-card item ">
+                                    <div class="iconWidget service-icon ">
+     <i class="fa fa-envelope-open custom-icon"></i></div>            
+                                <div class="richTextWidget  ">
+     <h2 class="width-set">Personalized Therapy Planning</h2> <p>Our software enables personalized therapy planning, tailored to each patient&rsquo;s unique communication goals and challenges, ensuring targeted intervention strategies.</p></div>            
+    
+</div>
+            
+    
+</div>
+            
+                                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                    <div class="service-card item ">
+                                    <div class="iconWidget service-icon ">
+     <i class="fa fa-puzzle-piece custom-icon"></i></div>            
+                                <div class="richTextWidget  ">
+     <h2 class="first-row-dot width-set">Real-time Progress Tracking</h2> <p>TherapyTalk includes real-time progress tracking capabilities, allowing clinicians to monitor and adjust therapy plans based on objective data and patient feedback.</p></div>            
+    
+</div>
+            
+    
+</div>
+            
+                                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                    <div class="service-card item ">
+                                    <div class="iconWidget service-icon ">
+     <i class="fa fa-user-plus custom-icon"></i></div>            
+                                <div class="richTextWidget  ">
+     <h2 class="width-set">Speech Recognition Technology</h2> <p>Leveraging cutting-edge speech recognition technology, TherapyTalk facilitates interactive therapy sessions and supports speech production exercises.</p></div>            
+    
+</div>
+            
+    
+</div>
+            
+                                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                    <div class="service-card item ">
+                                    <div class="iconWidget service-icon ">
+     <i class="fa fa-exclamation-triangle custom-icon"></i></div>            
+                                <div class="richTextWidget  ">
+     <h2 class="width-set">Patient Engagement Tools</h2> <p>We offer patient engagement tools that promote active participation and motivation, fostering a collaborative environment for communication therapy.</p></div>            
+    
+</div>
+            
+    
+</div>
+            
+                                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                    <div class="service-card item ">
+                                    <div class="iconWidget service-icon ">
+     <i class="fa fa-shield custom-icon"></i></div>            
+                                <div class="richTextWidget  ">
+     <h2 class="width-set">Data Management and Reporting</h2> <p>Our software includes robust data management and reporting features, simplifying clinical documentation and ensuring compliance with regulatory standards.</p></div>            
+    
+</div>
+            
+    
+</div>
+            
+    
+</div>
+            
+    
+</div>
+            
+    
+</div>
+            
+    
+</section><section id="section-13431231" class="
+                faq-section                 "><div class="container boxWidget">
+                                    <div class="row custom-row ">
+                                    <div class="col-lg-4 col-md-4 col-sm-12 ">
+                                            <div class="imageWidget  ">
+                                                        <img class="lazyload faq-img" data-src="//images.pexels.com/photos/2821823/pexels-photo-2821823.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800"></div>
+ 
+            
+    
+</div>
+            
+                                <div class="col-lg-8 col-md-8 col-sm-12 ">
+                                    <div class="richTextWidget para-normal ">
+          <h1 style="margin-bottom: 10px;">Frequently Asked Questions</h1>   <p style="margin-bottom: 20px;">We understand that you may have questions about TherapyTalk. Here are some common inquiries and detailed responses to provide clarity:</p></div>            
+                                    <style id="accordionStyle-13431238">
+            </style><div class="AccordionWidget panel-group  accordion-style2 4160a0" id="accordion-13431238" component-data="{&quot;accordionSetting&quot;:{&quot;dataTarget&quot;:&quot;.tab-content&quot;,&quot;panelClass&quot;:&quot;panel panel-default&quot;,&quot;panelHeadingClass&quot;:&quot;panel-heading&quot;,&quot;panelTitleClass&quot;:&quot;panel-title&quot;,&quot;accordionDivClass&quot;:&quot;panel-body&quot;,&quot;panelCollapseClass&quot;:&quot;panel-collapse collapse&quot;,&quot;accordionStyleClass&quot;:&quot;accordion-style2&quot;,&quot;accordionColorClass&quot;:&quot;4160a0&quot;,&quot;accordionDefaultStyleClass&quot;:&quot;accordion-style2&quot;,&quot;accordionDefaultColorClass&quot;:&quot;4160a0&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;},&quot;tabLists&quot;:[{&quot;id&quot;:&quot;menu0&quot;,&quot;tabClass&quot;:&quot;active&quot;,&quot;alt&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;title&quot;:&quot;What makes TherapyTalk unique?&quot;,&quot;value&quot;:&quot;TherapyTalk offers a comprehensive suite of clinical management tools specifically designed for speech-language pathologists, with a focus on personalized care and advanced technology integration.&quot;,&quot;is_updated&quot;:&quot;true&quot;},{&quot;id&quot;:&quot;menu1&quot;,&quot;tabClass&quot;:&quot;&quot;,&quot;alt&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;style&quot;:&quot;&quot;,&quot;title&quot;:&quot;How can TherapyTalk benefit my practice?&quot;,&quot;value&quot;:&quot;Our software is designed to optimize clinical workflows, enhance patient outcomes, and empower clinicians with efficient, evidence-based communication intervention tools.&quot;,&quot;is_updated&quot;:&quot;true&quot;},{&quot;id&quot;:&quot;menu2&quot;,&quot;tabClass&quot;:&quot;&quot;,&quot;alt&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;title&quot;:&quot;Is TherapyTalk user-friendly?&quot;,&quot;value&quot;:&quot;Yes, TherapyTalk is intuitively designed to streamline clinical processes and offer a user-friendly experience for speech-language pathologists, enabling efficient care delivery.&quot;,&quot;is_updated&quot;:&quot;true&quot;},{&quot;id&quot;:&quot;menu4&quot;,&quot;tabClass&quot;:&quot;&quot;,&quot;alt&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;title&quot;:&quot;Can I customize therapy plans with TherapyTalk?&quot;,&quot;value&quot;:&quot;Absolutely, TherapyTalk enables clinicians to create personalized therapy plans tailored to each patient's communication needs, ensuring individualized care and targeted interventions.&quot;,&quot;is_updated&quot;:&quot;true&quot;},{&quot;id&quot;:&quot;menu5&quot;,&quot;tabClass&quot;:&quot;&quot;,&quot;alt&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;title&quot;:&quot;How can I request a demo of TherapyTalk?&quot;,&quot;value&quot;:&quot;To request a demo of TherapyTalk and explore its features firsthand, simply contact our team, and we will be happy to arrange a personalized demonstration for you.&quot;,&quot;is_updated&quot;:&quot;true&quot;}],&quot;value&quot;:&quot;&quot;}" data-compid="13431238" compid="13431238" pageid="412861">
+                     
+                                        <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a style="cursor: pointer;" data-toggle="collapse" data-parent="#accordion-13431238" data-target="#collapse0-13431238">What makes TherapyTalk unique?</a>
+                        </h4>
+                    </div>
+                    <div id="collapse0-13431238" class="panel-collapse collapse   in ">
+                        <div data-tabmenu="tabmenu" data-tabno="0" class="panel-body  richTextWidget" data-menu="" style="min-height: 100px;">
+                            TherapyTalk offers a comprehensive suite of clinical management tools specifically designed for speech-language pathologists, with a focus on personalized care and advanced technology integration.
+                        </div>
+                    </div>
+                </div>
+                                            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" style="cursor: pointer;" data-toggle="collapse" data-parent="#accordion-13431238" data-target="#collapse1-13431238">How can TherapyTalk benefit my practice?</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1-13431238" class="panel-collapse collapse  ">
+                        <div data-tabmenu="tabmenu" data-tabno="1" class="panel-body  richTextWidget" data-menu="" style="min-height: 100px;">
+                            Our software is designed to optimize clinical workflows, enhance patient outcomes, and empower clinicians with efficient, evidence-based communication intervention tools.
+                        </div>
+                    </div>
+                </div>
+                                            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" style="cursor: pointer;" data-toggle="collapse" data-parent="#accordion-13431238" data-target="#collapse2-13431238">Is TherapyTalk user-friendly?</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2-13431238" class="panel-collapse collapse  ">
+                        <div data-tabmenu="tabmenu" data-tabno="2" class="panel-body  richTextWidget" data-menu="" style="min-height: 100px;">
+                            Yes, TherapyTalk is intuitively designed to streamline clinical processes and offer a user-friendly experience for speech-language pathologists, enabling efficient care delivery.
+                        </div>
+                    </div>
+                </div>
+                                            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" style="cursor: pointer;" data-toggle="collapse" data-parent="#accordion-13431238" data-target="#collapse3-13431238">Can I customize therapy plans with TherapyTalk?</a>
+                        </h4>
+                    </div>
+                    <div id="collapse3-13431238" class="panel-collapse collapse  ">
+                        <div data-tabmenu="tabmenu" data-tabno="3" class="panel-body  richTextWidget" data-menu="" style="min-height: 100px;">
+                            Absolutely, TherapyTalk enables clinicians to create personalized therapy plans tailored to each patient's communication needs, ensuring individualized care and targeted interventions.
+                        </div>
+                    </div>
+                </div>
+                                            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" style="cursor: pointer;" data-toggle="collapse" data-parent="#accordion-13431238" data-target="#collapse4-13431238">How can I request a demo of TherapyTalk?</a>
+                        </h4>
+                    </div>
+                    <div id="collapse4-13431238" class="panel-collapse collapse  ">
+                        <div data-tabmenu="tabmenu" data-tabno="4" class="panel-body  richTextWidget" data-menu="" style="min-height: 100px;">
+                            To request a demo of TherapyTalk and explore its features firsthand, simply contact our team, and we will be happy to arrange a personalized demonstration for you.
+                        </div>
+                    </div>
+                </div>
+                                        
+    </div>
+            
+    
+</div>
+            
+    
+</div>
+            
+    
+</div>
+            
+    
+</section></div>
+<footer class="footerBefore wb-footer  wb-footer " style=""><div class="container boxWidget">
+                                    <div class="footer-content ">
+                                    <div class="row ">
+                                    <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                    <div class=" ">
+                                    <div class="richTextWidget  ">
+     <h5>Contact</h5></div>            
+                                <div class="richTextWidget footer-links ">
+     <ul><li><span class="fa" style="margin-right: 18px;">&#61505;</span><a href="#">TherapyTalk, Amravati, India</a></li>
+<li><span class="fa">&#61589;</span> <a href="#">+91 1234567890</a></li>
+<li><span class="fa">&#62134;</span><a href="#">support@therapytalk.com</a></li>
+</ul></div>            
+    
+</div>
+            
+    
+</div>
+            
+                                <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                    <div class="richTextWidget  ">
+     <h5>Services</h5></div>            
+                                <div class="richTextWidget footer-links ">
+     <ul><li><a href="{{ url_for('services') }}?innove">Personalized Therapy Planning</a></li><li><a href="{{ url_for('services') }}?innove">Real-time Progress Tracking</a></li><li><a href="{{ url_for('services') }}?innove">Speech Recognition Technology</a></li></ul></div>            
+    
+</div>
+            
+                                <div class="footer-copyright ">
+                                    <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                    <div class="richTextWidget  ">
+      <h5 style="font-weight: 700;">Social Links</h5></div>            
+                                
+
+<div class="socialIconsWidget     ">
+    <ul compid="13431294" pageid="0" component-data='{"socialIcons":[{"id":"icon1","slug":"facebook","url":"https:\/\/www.facebook.com\/","code":"&amp;#xf09a;"},{"id":"icon4","slug":"linkedin","url":"https:\/\/www.linkedin.com\/","code":"&amp;#xf0e1;"},{"id":"icon4","slug":"dribble","url":"https:\/\/dribbble.com\/","code":"&amp;#xf17d;"},{"id":"icon4","slug":"Github","url":"https:\/\/github.com\/","code":"&amp;#xf09b;"}]}' class="editSocialIcon"><li><a href="https://www.facebook.com/" target="_blank"><span class="fa">&#61594;</span></a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank"><span class="fa">&#61665;</span></a></li>
+                    <li><a href="https://dribbble.com/" target="_blank"><span class="fa">&#61821;</span></a></li>
+                    <li><a href="https://github.com/" target="_blank"><span class="fa">&#61595;</span></a></li>
+            </ul></div>            
+    
+</div>
+            
+    
+</div>
+            
+    
+</div>
+            
+    
+</div>
+            
+    
+</div>
+            
+                                <div class="container boxWidget">
+                                    <div class="footer-copyright ">
+                                    <div class="row ">
+                                    <div class="richTextWidget col-lg-12 col-md-12 col-sm-12 ">
+     <p style="border-top: 1px solid white; padding: 5px; text-align: center; color: black;">Copyright 2024 All Rights Reserved.&nbsp;</p></div>            
+    
+</div>
+            
+    
+</div>
+            
+    
+</div>
+            
+    
+</footer>
+
+
+
+
+
+<script src="https://static.sitemantic.com/webbuilder/js/lightbox/src/js/lightbox.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+                            
+    <script>
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        window.lazySizesConfig.lazyClass = 'lazy';
+        window.lazySizesConfig.srcAttr = 'data-original';
+
+        wow = new WOW(
+        {
+          animateClass: 'animated',
+          offset:       100
+        }
+      );
+      wow.init();
+    </script>
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-38222064-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<script language='JavaScript' type='text/javascript'>
+
+var ecommerceConfig={
+    'bussinessAccount' :'',
+    'paymentGatewayUrl':''
+}
+
+var imageBg = null;
+
+$('.dropdown').find('a').each(function() {
+    $(this).attr('href',$(this).attr('href')+"?innove");
+});
+</script>
+
+
+<script>
+    var AppConfig = {
+
+        'siteId': '8dd13a70ea39740c6638e795cb79fdfc',
+        'api_url': 'https://system.sitemantic.com/apps/api/',
+        'api_key': '',
+        'template' : 'pro-pulse'
+    }
+
+</script>
+<script custom-script-id="website_global" src="//static.sitemantic.com/webbuilder/js/website_global.js"></script>
+
+</body>
+</html>
